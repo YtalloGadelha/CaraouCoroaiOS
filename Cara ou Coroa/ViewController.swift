@@ -9,6 +9,10 @@
 import UIKit
 
 class ViewController: UIViewController {
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -16,14 +20,8 @@ class ViewController: UIViewController {
             
             let vcDestino = segue.destination as! DetalhesViewController
             vcDestino.numeroRandomico = Int(arc4random_uniform(2))
+            
         }
     }
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
 }
-

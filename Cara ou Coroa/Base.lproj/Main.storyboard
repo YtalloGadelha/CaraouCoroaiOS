@@ -1,16 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Jj-T9-w5n">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24765" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3Jj-T9-w5n">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24743"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Cara ou Coroa-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cara_ou_Coroa" customModuleProvider="target" sceneMemberID="viewController">
@@ -27,6 +25,12 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CGZ-1j-K3z">
                                         <rect key="frame" x="0.0" y="174" width="321" height="74"/>
                                         <state key="normal" image="botao_jogar"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="dob-lU-gIs" kind="show" identifier="jogarMoeda" id="azl-lq-bAj"/>
                                         </connections>
@@ -34,14 +38,14 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.37950438261032104" green="0.74305778741836548" blue="0.55009114742279053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="z6s-vB-rTN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rNJ-4A-EUk"/>
                             <constraint firstItem="z6s-vB-rTN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zU4-Z3-RGK"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cara ou Coroa" id="KQh-cs-VRn"/>
+                    <navigationItem key="navigationItem" id="KQh-cs-VRn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,16 +59,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LOC-di-bYK">
-                                <rect key="frame" x="35" y="181" width="305" height="304"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LOC-di-bYK">
+                                <rect key="frame" x="35" y="181.5" width="305" height="304"/>
                             </imageView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="p1L-Hx-RX9"/>
                         <color key="backgroundColor" red="0.37950438261032104" green="0.74305778741836548" blue="0.55009114742279053" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="LOC-di-bYK" firstAttribute="centerX" secondItem="Lg2-7i-doa" secondAttribute="centerX" id="1MF-SI-Vyu"/>
                             <constraint firstItem="LOC-di-bYK" firstAttribute="centerY" secondItem="Lg2-7i-doa" secondAttribute="centerY" id="E4h-pA-tuG"/>
+                            <constraint firstItem="LOC-di-bYK" firstAttribute="height" secondItem="p1L-Hx-RX9" secondAttribute="height" multiplier="0.512648" id="E8G-BV-QpR"/>
+                            <constraint firstItem="LOC-di-bYK" firstAttribute="width" secondItem="p1L-Hx-RX9" secondAttribute="width" multiplier="0.813333" id="ppX-hF-akj"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="p1L-Hx-RX9"/>
                     </view>
                     <connections>
                         <outlet property="moedaImagem" destination="LOC-di-bYK" id="nuO-48-MEt"/>
@@ -80,7 +86,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3Jj-T9-w5n" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XpX-kQ-xnW">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="54"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
