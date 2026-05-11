@@ -16,6 +16,11 @@ class DetalhesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         mostraMoeda()
+        
+        let backButton = UIBarButtonItem()
+        backButton.tintColor = .gray
+        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
+        
     }
     
     func mostraMoeda() {
